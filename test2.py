@@ -92,12 +92,14 @@ elif((num1 == num2) and (num1 < num3) or (num1 == num3) and (num1 < num2) or (nu
 
 year = int(input("Enter year using 4 digits: "))
 
-if(year % 4 == 0 and year % 10 == 0):
-    print("Leap and century year!")
-elif(year % 4 == 0 and not year % 10 == 0):
-    print("Leap year not century year!")
+if(year % 4 == 0 and year % 100 == 0 and not year % 400 == 0):
+    print("Centurial year")
+elif (year % 4 == 0 and year % 100 == 0 and year % 400 == 0):
+    print("Centurial and leap year")
+elif(year % 4 == 0 and not year % 100 == 0):
+    print("Leap year!")
 else:
-    print("Not leap nor century year!")
+    print("Not centurial or leap year!")
 
 #Task Three: Time Traveler
 
